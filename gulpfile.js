@@ -65,7 +65,7 @@ function js(done) {
             'assets/js/lib/*.js',
             'assets/js/*.js'
         ], {sourcemaps: true}),
-        concat('casper.js'),
+        concat('mk1_scout.js'),
         uglify(),
         dest('assets/built/', {sourcemaps: '.'}),
         livereload()
@@ -89,6 +89,12 @@ function zipper(done) {
     ], handleError(done));
 }
 
+function dependencies(done) {
+    src('node_modules/bootstrap/dist/css/bootstrap.min.css').pipe(dest('./vendor/assets/bootstrap'));
+    src('node_modules/bootstrap/dist/css/bootstrap.min.css.map').pipe(dest('./vendor/assets/bootstrap'));
+    done();   
+}
+
 const cssWatcher = () => watch('assets/css/**', css);
 const jsWatcher = () => watch('assets/js/**', js);
 const hbsWatcher = () => watch(['*.hbs', 'partials/**/*.hbs'], hbs);
@@ -97,7 +103,7 @@ const build = series(css, js);
 
 exports.build = build;
 exports.zip = series(build, zipper);
-exports.default = series(build, serve, watcher);
+exports.default = series(dependencies, build, serve, watcher);
 
 exports.release = async () => {
     // @NOTE: https://yarnpkg.com/lang/en/docs/cli/version/
