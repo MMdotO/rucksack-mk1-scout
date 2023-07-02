@@ -1,4 +1,4 @@
-# Casper
+# Rucksack Mark 1 - Scout
 
 The default theme for [Ghost](http://github.com/tryghost/ghost/). This is the latest development version of Casper! If you're just looking to download the latest release, head over to the [releases](https://github.com/TryGhost/Casper/releases) page.
 
@@ -64,6 +64,6 @@ Casper uses inline SVG icons, included via Handlebars partials. You can find all
 You can add your own SVG icons in the same manner.
 
 
-# Copyright & License
+# Copyright
 
-Copyright (c) 2013-2022 Ghost Foundation - Released under the [MIT license](LICENSE).
+Copyright (c) 2023 [Gedankenrucksack.de](https://www.gedankenrucksack.de) - All rights reserved
