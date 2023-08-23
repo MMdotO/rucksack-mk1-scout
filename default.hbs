@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{@site.locale}}"{{#match @custom.color_scheme "Dark"}} class="dark-mode"{{else match @custom.color_scheme "Auto"}} class="auto-color"{{/match}}>
+<html lang="{{@site.locale}}">
 <head>
 
     {{!-- Basic meta - advanced meta is output with {ghost_head} below --}}
@@ -8,10 +8,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    {{!-- Preload scripts --}}
-    <link rel="preload" as="style" href="{{asset "built/screen.css"}}" />
-    <link rel="preload" as="script" href="{{asset "built/casper.js"}}" />
 
     {{!-- Theme assets - use the {asset} helper to reference styles & scripts,
     this will take care of caching and cache-busting automatically --}}
@@ -22,7 +18,7 @@
     {{ghost_head}}
 
 </head>
-<body class="{{body_class}} is-head-{{#match @custom.navigation_layout "Logo on cover"}}left-logo{{else match @custom.navigation_layout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Modern sans-serif"}} has-sans-body{{/match}}{{#if @custom.show_publication_cover}} has-cover{{/if}}">
+<body class="{{body_class}}">
 <div class="viewport">
 
     <header id="gh-head" class="gh-head outer{{#match @custom.header_style "Hidden"}} is-header-hidden{{/match}}">
@@ -58,10 +54,10 @@
                     <div class="gh-head-members">
                         {{#unless @member}}
                             {{#unless @site.members_invite_only}}
-                                <a class="gh-head-link" href="#/portal/signin" data-portal="signin">Sign in</a>
-                                <a class="gh-head-button" href="#/portal/signup" data-portal="signup">Subscribe</a>
+                                <a class="gh-head-link" href="#/portal/signin" data-portal="signin">Einloggen</a>
+                                <a class="gh-head-button" href="#/portal/signup" data-portal="signup">Registrieren</a>
                             {{else}}
-                                <a class="gh-head-button" href="#/portal/signin" data-portal="signin">Sign in</a>
+                                <a class="gh-head-button" href="#/portal/signin" data-portal="signin">Einloggen</a>
                             {{/unless}}
                         {{else}}
                             <a class="gh-head-button" href="#/portal/account" data-portal="account">Account</a>
@@ -84,7 +80,6 @@
             <nav class="site-footer-nav">
                 {{navigation type="secondary"}}
             </nav>
-            <div class="gh-powered-by"><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div>
         </div>
     </footer>
 
@@ -98,7 +93,7 @@
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
     crossorigin="anonymous">
 </script>
-<script src="{{asset "built/casper.js"}}"></script>
+<script src="{{asset "built/mk1_scout.js"}}"></script>
 <script>
 $(document).ready(function () {
     // Mobile Menu Trigger
