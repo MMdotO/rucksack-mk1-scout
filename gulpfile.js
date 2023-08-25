@@ -90,8 +90,10 @@ function zipper(done) {
 }
 
 function dependencies(done) {
-    src('node_modules/bootstrap/dist/css/bootstrap.min.css').pipe(dest('./vendor/assets/bootstrap'));
-    src('node_modules/bootstrap/dist/css/bootstrap.min.css.map').pipe(dest('./vendor/assets/bootstrap'));
+    src('node_modules/bootstrap/dist/css/bootstrap.min.css').pipe(dest('./assets/vendor/bootstrap'));
+    src('node_modules/bootstrap/dist/css/bootstrap.min.css.map').pipe(dest('./assets/vendor/bootstrap'));
+    src('node_modules/bootstrap/dist/js/bootstrap.min.js').pipe(dest('./assets/vendor/bootstrap'));
+    src('node_modules/bootstrap/dist/js/bootstrap.min.js.map').pipe(dest('./assets/vendor/bootstrap'));
     done();   
 }
 
