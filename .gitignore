@@ -14,7 +14,7 @@ results
 npm-debug.log
 node_modules
 assets/built
-vendor/assets/bootstrap
+assets/vendor/bootstrap
 package-lock.json
 
 .idea/*
