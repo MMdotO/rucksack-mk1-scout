@@ -660,8 +660,6 @@
     1. Template default css
 -------------------------------*/
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Playfair+Display:400,700,900|Gothic+A1:200,300,400,500,600,700,800,900|Montserrat:300,400,500,600,700,800|Roboto:300,400,500,700,900|Satisfy');
-
 @media only screen and (min-width: 1200px) {
     .container {
         max-width: 1200px;
