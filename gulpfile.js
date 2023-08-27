@@ -95,7 +95,7 @@ function dependencies(done) {
     src('node_modules/bootstrap/dist/js/bootstrap.min.js').pipe(dest('./assets/vendor/bootstrap'));
     src('node_modules/bootstrap/dist/js/bootstrap.min.js.map').pipe(dest('./assets/vendor/bootstrap'));
     src('node_modules/jquery/dist/jquery.min.js').pipe(dest('./assets/vendor/jquery'));
-    src('node_modules/jquery/dist/jquery.min.js.map').pipe(dest('./assets/vendor/jquery'));    
+    src('node_modules/jquery/dist/jquery.min.map').pipe(dest('./assets/vendor/jquery'));    
     done();   
 }
 
