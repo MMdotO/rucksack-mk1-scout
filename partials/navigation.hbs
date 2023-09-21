@@ -1,0 +1,9 @@
+{{#if isSecondary}}
+    {{#foreach navigation}}
+        <li class="nav-item"><a href="{{url absolute="true"}}" class="nav-link px-2 text-body-secondary" rel="nofollow">{{label}}</a></li>
+    {{/foreach}}
+{{else}}
+    {{#foreach navigation}}
+        <li class="nav-item"><a href="{{url absolute="true"}}" class="nav-link link-body-emphasis px-2">{{label}}</a></li>
+    {{/foreach}}
+{{/if}}
