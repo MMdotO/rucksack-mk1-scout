@@ -92,8 +92,9 @@ function zipper(done) {
 function dependencies(done) {
     src('node_modules/bootstrap/dist/css/bootstrap.min.css').pipe(dest('./assets/vendor/bootstrap'));
     src('node_modules/bootstrap/dist/css/bootstrap.min.css.map').pipe(dest('./assets/vendor/bootstrap'));
-    src('node_modules/bootstrap/dist/js/bootstrap.min.js').pipe(dest('./assets/vendor/bootstrap'));
-    src('node_modules/bootstrap/dist/js/bootstrap.min.js.map').pipe(dest('./assets/vendor/bootstrap'));
+    src('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js').pipe(dest('./assets/vendor/bootstrap'));
+    src('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js.map').pipe(dest('./assets/vendor/bootstrap'));
+    src('node_modules/bootstrap-icons/bootstrap-icons.svg').pipe(dest('./assets/vendor/bootstrap/icons'));
     src('node_modules/jquery/dist/jquery.min.js').pipe(dest('./assets/vendor/jquery'));
     src('node_modules/jquery/dist/jquery.min.map').pipe(dest('./assets/vendor/jquery'));    
     done();   
